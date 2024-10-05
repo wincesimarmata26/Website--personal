@@ -11,6 +11,27 @@
         }
         .navbar {
             margin-bottom: 0;
+
+        .welcome-title {
+    font-size: 2.5rem; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Jarak bawah */
+    color: #333; /* Warna teks */
+}
+
+.welcome-text {
+    font-size: 1.2rem; /* Ukuran font untuk teks */
+    line-height: 1.6; /* Jarak antar baris */
+    color: #555; /* Warna teks */
+}
+
+.welcome-link {
+    color: #007bff; /* Warna link */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.welcome-link:hover {
+    text-decoration: underline; /* Menambahkan garis bawah saat hover */
+}
         }
         table {
             margin-bottom: 50px;
@@ -63,19 +84,24 @@
 </div>
 
 <h1 style="color: black;">Perpustakaan Wince Simarmata</h1>
-<h2>Welcome To Perpustakaan Wince Simarmata</h2>
-<p>
-    Perkenalkan, nama saya Wince Simarmata dengan Nim 222201030. Ini adalah perpustakaan
-    <i>homepage</i> <b>pertama</b> saya, karena saya baru belajar tentang cara membuat
-    <b><i><a href="https://digilib.umbp.ac.id/">website perpustakaan Universitas Kristen Indonesia </a></i></b>.
-</p>
-<div id="media" class="container">
+<div id="welcome" class="container text-center">
+    <h2 class="welcome-title">Welcome To Perpustakaan Wince Simarmata</h2>
+    <p class="welcome-text">
+        Perkenalkan, nama saya Wince Simarmata dengan Nim 222201030. Ini adalah perpustakaan
+        <i>homepage</i> <b>pertama</b> saya, karena saya baru belajar tentang cara membuat
+        <b><i><a href="https://digilib.umbp.ac.id/" class="welcome-link">website perpustakaan Universitas Kristen Indonesia</a></i></b>.
+    </p>
+</div>
+
+    <div id="media" class="container">
     <h2>Media Perpustakaan</h2>
 
     <h3>Foto</h3>
     <div class="row">
         <div class="col-md-4">
-            <img src="picture/Cuplikan layar 2024-10-05 230829.png" class="img-responsive" alt="Deskripsi Foto 1">
+            <div class="embed-responsive embed-responsive-16by9">
+                <img src="picture/Cuplikan layar 2024-10-05 230829.png" class="img-responsive embed-responsive-item" alt="Deskripsi Foto 1">
+            </div>
             <p>Deskripsi untuk Foto 1.</p>
         </div>
     </div>
@@ -87,9 +113,12 @@
     <p>Perpustakaan UKI</p>
 
     <h3>Audio</h3>
-    <audio controls>
-        <source src="music/Jun Munthe - Raphon Ho (Official Music Video).mp3" type="audio/mpeg">
-    </audio>
+    <div class="embed-responsive embed-responsive-16by9">
+        <audio controls class="embed-responsive-item" style="width: 100%; height: auto;">
+            <source src="music/Jun Munthe - Raphon Ho (Official Music Video).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
     <p>Jun Munthe - Rapon Ho</p>
 </div>
 
