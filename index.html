@@ -57,7 +57,7 @@
     </style>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body> 
 
 <div class="container-fluid" style="background-image: url('picture/2457.jpg'); background-size: cover; background-position: center; color: white; text-align: center; padding: 5rem 0;">
     <nav class="navbar navbar-default" style="background-color: white;">
@@ -83,14 +83,16 @@
     </nav>
 </div>
 
-<h1 style="color: black;">Perpustakaan Wince Simarmata</h1>
-<div id="welcome" class="container text-center">
-    <h2 class="welcome-title">Welcome To Perpustakaan Wince Simarmata</h2>
-    <p class="welcome-text">
-        Perkenalkan, nama saya Wince Simarmata dengan Nim 222201030. Ini adalah perpustakaan
+<div class="container text-center my-5">
+    <h1 class="display-4 font-weight-bold text-primary">Perpustakaan Universita Kristen Indonesia/h1>
+    <h2 class="text-secondary mb-4">Welcome To Perpustakaan Wince Simarmata</h2>
+    <div class="welcome-text bg-light p-4 rounded shadow">
+    <p>
+           Perkenalkan, nama saya Wince Simarmata dengan Nim 222201030. Ini adalah perpustakaan
         <i>homepage</i> <b>pertama</b> saya, karena saya baru belajar tentang cara membuat
         <b><i><a href="https://digilib.umbp.ac.id/" class="welcome-link">website perpustakaan Universitas Kristen Indonesia</a></i></b>.
     </p>
+    </div>
 </div>
 
     <div id="media" class="container">
@@ -265,6 +267,52 @@
         </table>
     </form>
 
+    <h2>Formulir Anggota Perpustakaan Program Studi</h2>
+    <form>
+        <table>
+            <tr>
+                <td>Nama Lengkap:</td>
+                <td><input type="text" /></td>
+            </tr>
+            <tr>
+                <td>Nomor Induk Mahasiswa (NIM):</td>
+                <td><input type="text" name="NIM" /></td>
+            </tr>
+            <tr>
+                <td>Program Studi:</td>
+                <td>
+                    <select name="prodi">
+                        <option value="ilmu perpustakaan">Ilmu Perpustakaan</option>
+                        <option value="informatika">Informatika</option>
+                        <option value="manajemen">Manajemen</option>
+                        <option value="akuntansi">Akuntansi</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Fakultas:</td>
+                <td><input type="text" name="fakultas" /></td>
+            </tr>
+            <tr>
+                <td>Alamat Rumah:</td>
+                <td><input type="text" name="alamat" /></td>
+            </tr>
+            <tr>
+                <td>e-mail:</td>
+                <td><input type="email" name="email" placeholder="@gmail.com" /></td>
+            </tr>
+            <tr>
+                <td>Nomor Telepon:</td>
+                <td><input type="number" name="telepon" placeholder="+62..." /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Daftar" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
     <h2>Tabel Bahan Buku</h2>
     <table>
         <tr>
@@ -322,52 +370,61 @@
             <td>978-9792244762</td>
         </tr>
     </table>
+<div class="modal fade" id="html5Modal" tabindex="-1" role="dialog" aria-labelledby="html5ModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="html5ModalLabel">Fitur Utama HTML5</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2>1. Mengatur Tampilan</h2>
+                    <p>CSS mengatur elemen visual seperti warna, font, dan ukuran teks.</p>
+                    
+                   <h2>2. Membuat Tata Letak</h2>
+                   <p>CSS memungkinkan pengaturan posisi dan grid elemen halaman.</p>
+ 
+                    <h2>3. Responsive Design</h2>
+                    <p>CSS menyesuaikan tampilan di berbagai perangkat.</p>
+                    
+                    <h2>4. Meningkatkan Konsistensi</h2>
+                    <p>Desain yang sama dapat diterapkan di banyak halaman.</p>
+                    
+                   <h2>5. Memisahkan Konten dari Desain</h2>
+                   <p>Memudahkan pengembangan dan pemeliharaan.</p>
+         
+                   <h2>6. Meningkatkan Performa</h2>
+                   <p>Penggunaan CSS eksternal mempercepat pemuatan halaman.</p>
 
-    <h2>Formulir Anggota Perpustakaan Program Studi</h2>
-    <form>
-        <table>
-            <tr>
-                <td>Nama Lengkap:</td>
-                <td><input type="text" /></td>
-            </tr>
-            <tr>
-                <td>Nomor Induk Mahasiswa (NIM):</td>
-                <td><input type="text" name="NIM" /></td>
-            </tr>
-            <tr>
-                <td>Program Studi:</td>
-                <td>
-                    <select name="prodi">
-                        <option value="ilmu perpustakaan">Ilmu Perpustakaan</option>
-                        <option value="informatika">Informatika</option>
-                        <option value="manajemen">Manajemen</option>
-                        <option value="akuntansi">Akuntansi</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Fakultas:</td>
-                <td><input type="text" name="fakultas" /></td>
-            </tr>
-            <tr>
-                <td>Alamat Rumah:</td>
-                <td><input type="text" name="alamat" /></td>
-            </tr>
-            <tr>
-                <td>e-mail:</td>
-                <td><input type="email" name="email" placeholder="@gmail.com" /></td>
-            </tr>
-            <tr>
-                <td>Nomor Telepon:</td>
-                <td><input type="number" name="telepon" placeholder="+62..." /></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" value="Daftar" />
-                </td>
-            </tr>
-        </table>
-    </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="welcomeModalLabel">Selamat Datang</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Selamat datang di Perpustakaan UNPRI Medan! Kami senang Anda di sini.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
 
     <footer>
         <p>&copy; 2024 Perpustakaan Wince Simarmata. All Rights Reserved.</p>
