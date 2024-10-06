@@ -398,7 +398,82 @@
                 <td>978-9792244762</td>
             </tr>
         </tbody>
-    </table>
+    </table> 
+
+<div class="container">
+    <h3>Pameran Buku</h3>
+    <ul id="book-list" class="list-unstyled">
+        <li class="book-item">
+            <img src="picture/download (5).jpeg" alt="10 Langkah Mencerdaskan Kota">
+            <span>"10 Langkah Mencerdaskan Kota"</span>
+            <button class="details-btn" data-index="0">Detail</button>
+        </li>
+        <li class="book-item">
+            <img src="picture/download (6).jpeg" alt="Melangkah">
+            <span>"Melangkah"</span>
+            <button class="details-btn" data-index="1">Detail</button>
+        </li>
+        <li class="book-item">
+            <img src="picture/download (7).jpeg" alt="Ilmu Jalanan">
+            <span>"Ilmu Jalanan"</span>
+            <button class="details-btn" data-index="2">Detail</button>
+        </li>
+        <li class="book-item">
+            <img src="picture/download (8).jpeg" alt="Mengenal Diri Sendiri">
+            <span>"Mengenal Diri Sendiri"</span>
+            <button class="details-btn" data-index="3">Detail</button>
+        </li>
+        <li class="book-item">
+            <img src="picture/download (9).jpeg" alt="Outliers">
+            <span>"Outliers (Rahasia di balik kesuksesan)"</span>
+            <button class="details-btn" data-index="4">Detail</button>
+        </li>
+    </ul>
+    
+    <div id="book-detail"></div>
+</div>
+
+<script>
+    const bookDetails = [
+        {
+            title: "10 Langkah Mencerdaskan Kota",
+            detail: "Ditulis oleh Sutriadi, diterbitkan oleh ITB Press pada tahun 2018. Panduan tentang strategi untuk mencerdaskan kota."
+        },
+        {
+            title: "Melangkah",
+            detail: "Ditulis oleh JS Khairen, diterbitkan oleh Gramedia Widiasarana Indonesia pada tahun 2020. Sebuah buku motivasi untuk memulai langkah baru."
+        },
+        {
+            title: "Ilmu Jalanan",
+            detail: "Ditulis oleh Rico Tampenawas, diterbitkan oleh Elex Media Komputindo pada tahun 2018. Membahas pengetahuan yang diperoleh dari pengalaman hidup."
+        },
+        {
+            title: "Mengenal Diri Sendiri",
+            detail: "Ditulis oleh Eka Silvana, diterbitkan oleh Anak Hebat Indonesia pada tahun 2023. Buku ini membahas pentingnya mengenali diri sendiri."
+        },
+        {
+            title: "Outliers (Rahasia di balik kesuksesan)",
+            detail: "Ditulis oleh Malcolm Gladwell, diterbitkan oleh Gramedia Pustaka Utama pada tahun 2020. Buku ini menjelaskan faktor-faktor yang berkontribusi pada kesuksesan."
+        }
+    ];
+
+    const detailButtons = document.querySelectorAll('.details-btn');
+
+    detailButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const index = this.getAttribute('data-index'); 
+            const detailDiv = document.getElementById('book-detail');
+
+            if (bookDetails[index]) {
+                detailDiv.innerHTML = `<h4>Detail Buku:</h4><p>${bookDetails[index].detail}</p>`;
+            } else {
+                detailDiv.innerHTML = `<p>Detail untuk buku ini tidak tersedia.</p>`;
+            }
+        });
+    });
+</script> 
+
+    
 </div>
     <div class="modal fade" id="html5Modal" tabindex="-1" role="dialog" aria-labelledby="html5ModalLabel">
         <div class="modal-dialog" role="document">
@@ -472,16 +547,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
-<script>
-    // Contoh variabel
-    var nama = "John";
-    var umur = 17;
-    var berat = 60.5;
-
-    // Tampilkan informasi menggunakan document.write
-    document.write("Nama: " + nama + ", Umur: " + umur + ", Berat: " + berat + " kg");
-</script>
 
 </script>
     
