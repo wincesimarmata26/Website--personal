@@ -334,8 +334,28 @@
                     <button type="submit" class="btn btn-primary">Daftar</button>
                 </div>
             </div>
-        </form>
-    </section>
+        </form> 
+
+<div class="form-group">
+    <label class="control-label col-sm-2" for="tanggalPemesanan">Tanggal Pemesanan:</label>
+    <div class="col-sm-10">
+        <input type="date" class="form-control" id="tanggalPemesanan" />
+    </div>
+</div>
+<!-- Tambahan input dan tombol -->
+<div class="form-group">
+    <label class="control-label col-sm-2" for="jumlahBuku">Jumlah Buku:</label>
+    <div class="col-sm-10">
+        <input type="number" class="form-control" id="jumlahBuku" placeholder="Masukkan jumlah buku" />
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <button type="button" class="btn btn-primary" onclick="hitungJumlahBuku()">Hitung</button>
+        <button type="button" class="btn btn-secondary" onclick="tampilkanBuku()">Tampilkan Buku</button>
+    </div>
+</div>
+         </section>
 </div>
       
     <h2 id="tabel-buku" class="text-center mt-5 mb-4">Tabel Bahan Buku</h2>
@@ -472,5 +492,41 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+<script>
+    // Variabel untuk menyimpan jumlah buku yang dipesan
+    let jumlahBuku = 0;
+
+    // Fungsi untuk menghitung jumlah buku
+    function hitungJumlahBuku() {
+        // Mengambil nilai dari input jumlah buku
+        let inputJumlah = document.getElementById('jumlahBuku').value;
+
+        // Memastikan input adalah angka
+        if (isNaN(inputJumlah) || inputJumlah < 0) {
+            alert("Silakan masukkan jumlah buku yang valid.");
+            return;
+        }
+
+        // Menghitung jumlah buku
+        jumlahBuku += parseInt(inputJumlah);
+        alert("Jumlah total buku yang dipesan: " + jumlahBuku);
+        
+        // Mengosongkan input
+        document.getElementById('jumlahBuku').value = '';
+    }
+
+    // Struktur perulangan untuk menampilkan jumlah buku
+    function tampilkanBuku() {
+        let bukuList = [];
+        for (let i = 1; i <= jumlahBuku; i++) {
+            bukuList.push("Buku " + i);
+        }
+
+        // Menampilkan hasil
+        alert("Daftar Buku yang dipesan: \n" + bukuList.join("\n"));
+    }
+</script>
+    
 </body>
 </html>  
