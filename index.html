@@ -471,47 +471,6 @@
     
     <div id="book-detail"></div>
 </div>
-
-<script>
-    const bookDetails = [
-        {
-            title: "10 Langkah Mencerdaskan Kota",
-            detail: "Ditulis oleh Sutriadi, diterbitkan oleh ITB Press pada tahun 2018. Panduan tentang strategi untuk mencerdaskan kota."
-        },
-        {
-            title: "Melangkah",
-            detail: "Ditulis oleh JS Khairen, diterbitkan oleh Gramedia Widiasarana Indonesia pada tahun 2020. Sebuah buku motivasi untuk memulai langkah baru."
-        },
-        {
-            title: "Ilmu Jalanan",
-            detail: "Ditulis oleh Rico Tampenawas, diterbitkan oleh Elex Media Komputindo pada tahun 2018. Membahas pengetahuan yang diperoleh dari pengalaman hidup."
-        },
-        {
-            title: "Mengenal Diri Sendiri",
-            detail: "Ditulis oleh Eka Silvana, diterbitkan oleh Anak Hebat Indonesia pada tahun 2023. Buku ini membahas pentingnya mengenali diri sendiri."
-        },
-        {
-            title: "Outliers (Rahasia di balik kesuksesan)",
-            detail: "Ditulis oleh Malcolm Gladwell, diterbitkan oleh Gramedia Pustaka Utama pada tahun 2020. Buku ini menjelaskan faktor-faktor yang berkontribusi pada kesuksesan."
-        }
-    ];
-
-    const detailButtons = document.querySelectorAll('.details-btn');
-
-    detailButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const index = this.getAttribute('data-index'); 
-            const detailDiv = document.getElementById('book-detail');
-
-            if (bookDetails[index]) {
-                detailDiv.innerHTML = `<h4>Detail Buku:</h4><p>${bookDetails[index].detail}</p>`;
-            } else {
-                detailDiv.innerHTML = `<p>Detail untuk buku ini tidak tersedia.</p>`;
-            }
-        });
-    });
-</script> 
-
     
 </div>
     <div class="modal fade" id="html5Modal" tabindex="-1" role="dialog" aria-labelledby="html5ModalLabel">
@@ -587,7 +546,45 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-</script>
+<script>
+    const bookDetails = [
+        {
+            title: "10 Langkah Mencerdaskan Kota",
+            detail: "Ditulis oleh Sutriadi, diterbitkan oleh ITB Press pada tahun 2018. Panduan tentang strategi untuk mencerdaskan kota."
+        },
+        {
+            title: "Melangkah",
+            detail: "Ditulis oleh JS Khairen, diterbitkan oleh Gramedia Widiasarana Indonesia pada tahun 2020. Sebuah buku motivasi untuk memulai langkah baru."
+        },
+        {
+            title: "Ilmu Jalanan",
+            detail: "Ditulis oleh Rico Tampenawas, diterbitkan oleh Elex Media Komputindo pada tahun 2018. Membahas pengetahuan yang diperoleh dari pengalaman hidup."
+        },
+        {
+            title: "Mengenal Diri Sendiri",
+            detail: "Ditulis oleh Eka Silvana, diterbitkan oleh Anak Hebat Indonesia pada tahun 2023. Buku ini membahas pentingnya mengenali diri sendiri."
+        },
+        {
+            title: "Outliers (Rahasia di balik kesuksesan)",
+            detail: "Ditulis oleh Malcolm Gladwell, diterbitkan oleh Gramedia Pustaka Utama pada tahun 2020. Buku ini menjelaskan faktor-faktor yang berkontribusi pada kesuksesan."
+        }
+    ];
+
+    const detailButtons = document.querySelectorAll('.details-btn');
+
+    detailButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const index = this.getAttribute('data-index'); 
+            const detailDiv = document.getElementById('book-detail');
+
+            if (bookDetails[index]) {
+                detailDiv.innerHTML = `<h4>Detail Buku:</h4><p>${bookDetails[index].detail}</p>`;
+            } else {
+                detailDiv.innerHTML = `<p>Detail untuk buku ini tidak tersedia.</p>`;
+            }
+        });
+    });
+</script> 
     
 </body>
 </html>  
