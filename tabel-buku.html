@@ -1,1 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Wince Simarmata</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("picture/efa2c05b-5f7e-430f-a22e-867136c5e31e.jpg");
+            background-size: cover;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
 
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            color: #444;
+            text-align: center;
+        }
+
+        h3 {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .media-section {
+            margin-top: 50px;
+        }
+
+        .audio-control {
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .nav > li > a {
+            padding: 15px 20px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 24px;
+        } 
+
+        .book-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .book-item img {
+            width: 100px; 
+            height: 150px;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+         .details-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: auto; 
+        }
+
+        .details-btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px); 
+
+        #book-detail {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+          
+    </style>
+</head>
+<body>
+    <h2 id="tabel-buku" class="text-center mt-5 mb-4">Tabel Bahan Buku</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Judul Buku</th>
+                <th>Pengarang</th>
+                <th>Penerbit</th>
+                <th>Tahun Terbit</th>
+                <th>Jumlah Halaman</th>
+                <th>ISBN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>"10 Langkah Mencerdaskan Kota"</td>
+                <td>Sutriadi</td>
+                <td>ITB Press</td>
+                <td>2018</td>
+                <td>321</td>
+                <td>978-602-5417-25-2</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>"Melangkah"</td>
+                <td>JS khairen</td>
+                <td>Gramedia Widiasarana Indonesia</td>
+                <td>2020</td>
+                <td>368</td>
+                <td>978-6020523316</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>"Ilmu Jalanan"</td>
+                <td>Rico Tampenawas</td>
+                <td>Elex Media Komputindo</td>
+                <td>2018</td>
+                <td>212</td>
+                <td>SCOOPG162268</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>"Mengenal Diri Sendiri"</td>
+                <td>Eka Silvana</td>
+                <td>Anak Hebat Indonesia</td>
+                <td>2023</td>
+                <td>182</td>
+                <td>978-6234007480</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>"Outliers (Rahasia di balik kesuksesan)"</td>
+                <td>Malcolm Gladwell</td>
+                <td>Gramedia Pustaka Utama</td>
+                <td>2020</td>
+                <td>354</td>
+                <td>978-9792244762</td>
+            </tr>
+        </tbody>
+    </table> 
+
+<div class="container">
+    <h3>Pameran Buku</h3>
+    <ul id="book-list" class="list-unstyled">
+        <li class="book-item">
+            <img src="picture/download (5).jpeg" alt="10 Langkah Mencerdaskan Kota">
+            <span>"10 Langkah Mencerdaskan Kota"</span>
+            <button class="details-btn" data-index="0">Detail</button>
+        </li>
+        <li class="book-item">
+            <img src="picture/download (6).jpeg" alt="Melangkah">
+            <span>"Melangkah"</span>
+            <button class="details-btn" data-index="1">Detail</button>
+        </li>
+        <li class="book-item">
+            <img src="picture/download (7).jpeg" alt="Ilmu Jalanan">
+            <span>"Ilmu Jalanan"</span>
+            <button class="details-btn" data-index="2">Detail</button>
+        </li>
+        <li class="book-item">
+            <img src="picture/download (8).jpeg" alt="Mengenal Diri Sendiri">
+            <span>"Mengenal Diri Sendiri"</span>
+            <button class="details-btn" data-index="3">Detail</button>
+        </li>
+        <li class="book-item">
+            <img src="picture/download.png" alt="Outliers">
+            <span>"Outliers (Rahasia di balik kesuksesan)"</span>
+            <button class="details-btn" data-index="4">Detail</button>
+        </li>
+    </ul>
+    
+    <div id="book-detail"></div>
+</div>
+    
+
+    <footer>
+        <p>&copy; 2024 Perpustakaan Wince Simarmata. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+<script>
+    const bookDetails = [
+        {
+            title: "10 Langkah Mencerdaskan Kota",
+            detail: "Ditulis oleh Sutriadi, diterbitkan oleh ITB Press pada tahun 2018. Panduan tentang strategi untuk mencerdaskan kota."
+        },
+        {
+            title: "Melangkah",
+            detail: "Ditulis oleh JS Khairen, diterbitkan oleh Gramedia Widiasarana Indonesia pada tahun 2020. Sebuah buku motivasi untuk memulai langkah baru."
+        },
+        {
+            title: "Ilmu Jalanan",
+            detail: "Ditulis oleh Rico Tampenawas, diterbitkan oleh Elex Media Komputindo pada tahun 2018. Membahas pengetahuan yang diperoleh dari pengalaman hidup."
+        },
+        {
+            title: "Mengenal Diri Sendiri",
+            detail: "Ditulis oleh Eka Silvana, diterbitkan oleh Anak Hebat Indonesia pada tahun 2023. Buku ini membahas pentingnya mengenali diri sendiri."
+        },
+        {
+            title: "Outliers (Rahasia di balik kesuksesan)",
+            detail: "Ditulis oleh Malcolm Gladwell, diterbitkan oleh Gramedia Pustaka Utama pada tahun 2020. Buku ini menjelaskan faktor-faktor yang berkontribusi pada kesuksesan."
+        }
+    ];
+
+    const detailButtons = document.querySelectorAll('.details-btn');
+
+    detailButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const index = this.getAttribute('data-index'); 
+            const detailDiv = document.getElementById('book-detail');
+
+            if (bookDetails[index]) {
+                detailDiv.innerHTML = `<h4>Detail Buku:</h4><p>${bookDetails[index].detail}</p>`;
+            } else {
+                detailDiv.innerHTML = `<p>Detail untuk buku ini tidak tersedia.</p>`;
+            }
+        });
+    });
+</script> 
+    
+</body>
+</html>  
