@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Wince Simarmata</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("picture/efa2c05b-5f7e-430f-a22e-867136c5e31e.jpg");
+            background-size: cover;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            color: #444;
+            text-align: center;
+        }
+
+        h3 {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .media-section {
+            margin-top: 50px;
+        }
+
+        .audio-control {
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .nav > li > a {
+            padding: 15px 20px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 24px;
+        } 
+
+        .book-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .book-item img {
+            width: 100px; 
+            height: 150px;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+         .details-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: auto; 
+        }
+
+        .details-btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px); 
+
+        #book-detail {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+          
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+    <h1 id="formulir" class="text-center mb-4">Formulir</h1>
+    
+    <section>
+        <h2 class="mb-3">Formulir Pemesanan Buku</h2>
+        <form class="form-horizontal">
+             <div class="form-group">
+                <label class="control-label col-sm-2" for="nama">Nama Lengkap:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nama" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="nomorAnggota">Nomor Anggota Perpustakaan:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="nomorAnggota" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">e-mail:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="@gmail.com" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="telepon">Nomor Telepon:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="telepon" placeholder="+62..." />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Jenis Kelamin:</label>
+                <div class="col-sm-10">
+                    <label class="radio-inline"><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+                    <label class="radio-inline"><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <h4>Detail Pemesanan</h4>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="judulBuku">Judul Buku Yang Dipesan:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="judulBuku" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="penulisBuku">Penulis Buku:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="penulisBuku" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="isbn">Nomor ISBN:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="isbn" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="tanggalPemesanan">Tanggal Pemesanan:</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="tanggalPemesanan" />
+                </div>
+            </div>
+            <div class="form-group">        
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+                </div>
+            </div>
+        </form>
+        
+        <h2 class="mt-5 mb-3">Formulir Perpanjangan Peminjaman Buku</h2>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="namaPerpanjang">Nama Lengkap:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="namaPerpanjang" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="nomorAnggotaPerpanjang">Nomor Anggota Perpustakaan:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="nomorAnggotaPerpanjang" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="emailPerpanjang">e-mail:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="emailPerpanjang" placeholder="@gmail.com" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <h4>Detail Pemesanan Awal</h4>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="judulBukuPerpanjang">Judul Buku Yang Dipesan:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="judulBukuPerpanjang" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="penulisBukuPerpanjang">Penulis Buku:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="penulisBukuPerpanjang" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="isbnPerpanjang">Nomor ISBN:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="isbnPerpanjang" />
+                </div>
+            </div>
+            <div class="form-group">        
+                <div class="col-sm-offset-2 col-sm-10">
+                    <h4>Perpanjangan Peminjaman Buku</h4>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="tanggalPerpanjang">Tanggal Perpanjangan Peminjaman Buku:</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="tanggalPerpanjang" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="alasanPerpanjang">Alasan Perpanjangan:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="alasanPerpanjang" />
+                </div>
+            </div>
+            <div class="form-group">        
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+                </div>
+            </div>
+        </form>
+
+        <h2 class="mt-5 mb-3">Formulir Anggota Perpustakaan Program Studi</h2>
+        <form class="form-horizontal">
+             <div class="form-group">
+                <label class="control-label col-sm-2" for="namaAnggota">Nama Lengkap:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="namaAnggota" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="nim">Nomor Induk Mahasiswa (NIM):</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nim" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="prodi">Program Studi:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="prodi">
+                        <option value="ilmu perpustakaan">Ilmu Perpustakaan</option>
+                        <option value="informatika">Informatika</option>
+                        <option value="manajemen">Manajemen</option>
+                        <option value="akuntansi">Akuntansi</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="fakultas">Fakultas:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="fakultas" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="alamat">Alamat Rumah:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="alamat" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="emailAnggota">e-mail:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="emailAnggota" placeholder="@gmail.com" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="teleponAnggota">Nomor Telepon:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="teleponAnggota" placeholder="+62..." />
+                </div>
+            </div>
+            <div class="form-group">        
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Daftar</button>
+                </div>
+            </div>
+        </form> 
+         </section>
+</div>
+      
+    
+</body>
+</html>  
