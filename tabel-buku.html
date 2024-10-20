@@ -44,58 +44,6 @@
             text-align: center;
             font-weight: bold;
         }
-
-        img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .book-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .book-item img {
-            width: 100px; 
-            height: 150px;
-            margin-right: 15px;
-            object-fit: cover;
-        }
-
-        .book-info {
-            flex: 1;
-            text-align: left;
-        }
-
-        .details-btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-left: auto;
-        }
-
-        .details-btn:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
-        }
-
-        .book-detail {
-            margin-top: 10px;
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 5px;
-            background: #f9f9f9;
-            display: none; 
-        }
     </style>
 </head>
 <body>
@@ -161,98 +109,13 @@
         </tbody>
     </table> 
 
-    <div class="container">
-        <h3>Pameran Buku</h3>
-        <ul id="book-list" class="list-unstyled">
-            <li class="book-item">
-                <img src="picture/download (5).jpeg" alt="10 Langkah Mencerdaskan Kota">
-                <div class="book-info">
-                    <span>"10 Langkah Mencerdaskan Kota"</span>
-                    <div class="book-detail" id="detail-0"></div>
-                </div>
-                <button class="details-btn" data-index="0">Detail</button>
-            </li>
-            <li class="book-item">
-                <img src="picture/download (6).jpeg" alt="Melangkah">
-                <div class="book-info">
-                    <span>"Melangkah"</span>
-                    <div class="book-detail" id="detail-1"></div>
-                </div>
-                <button class="details-btn" data-index="1">Detail</button>
-            </li>
-            <li class="book-item">
-                <img src="picture/download (7).jpeg" alt="Ilmu Jalanan">
-                <div class="book-info">
-                    <span>"Ilmu Jalanan"</span>
-                    <div class="book-detail" id="detail-2"></div>
-                </div>
-                <button class="details-btn" data-index="2">Detail</button>
-            </li>
-            <li class="book-item">
-                <img src="picture/download (8).jpeg" alt="Mengenal Diri Sendiri">
-                <div class="book-info">
-                    <span>"Mengenal Diri Sendiri"</span>
-                    <div class="book-detail" id="detail-3"></div>
-                </div>
-                <button class="details-btn" data-index="3">Detail</button>
-            </li>
-            <li class="book-item">
-                <img src="picture/download.png" alt="Outliers">
-                <div class="book-info">
-                    <span>"Outliers (Rahasia di balik kesuksesan)"</span>
-                    <div class="book-detail" id="detail-4"></div>
-                </div>
-                <button class="details-btn" data-index="4">Detail</button>
-            </li>
-        </ul>
-    </div>
 
-    <footer>
-        <p>&copy; 2024 Perpustakaan Wince Simarmata. All Rights Reserved.</p>
-    </footer>
+<footer>
+     <p>&copy; 2024 Perpustakaan Wince Simarmata. All Rights Reserved.</p>
+ </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-    <script>
-        const bookDetails = [
-            {
-                title: "10 Langkah Mencerdaskan Kota",
-                detail: "Ditulis oleh Sutriadi, diterbitkan oleh ITB Press pada tahun 2018. Panduan tentang strategi untuk mencerdaskan kota."
-            },
-            {
-                title: "Melangkah",
-                detail: "Ditulis oleh JS Khairen, diterbitkan oleh Gramedia Widiasarana Indonesia pada tahun 2020. Sebuah buku motivasi untuk memulai langkah baru."
-            },
-            {
-                title: "Ilmu Jalanan",
-                detail: "Ditulis oleh Rico Tampenawas, diterbitkan oleh Elex Media Komputindo pada tahun 2018. Membahas pengetahuan yang diperoleh dari pengalaman hidup."
-            },
-            {
-                title: "Mengenal Diri Sendiri",
-                detail: "Ditulis oleh Eka Silvana, diterbitkan oleh Anak Hebat Indonesia pada tahun 2023. Buku ini membahas pentingnya mengenali diri sendiri."
-            },
-            {
-                title: "Outliers (Rahasia di balik kesuksesan)",
-                detail: "Ditulis oleh Malcolm Gladwell, diterbitkan oleh Gramedia Pustaka Utama pada tahun 2020. Buku ini menjelaskan faktor-faktor yang berkontribusi pada kesuksesan."
-            }
-        ];
-
-        const detailButtons = document.querySelectorAll('.details-btn');
-
-        detailButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const index = this.getAttribute('data-index');
-                const detailDiv = document.getElementById(`detail-${index}`);
-
-                if (detailDiv.style.display === "block") {
-                    detailDiv.style.display = "none"; 
-                } else {
-                    detailDiv.innerHTML = `<h4>Detail Buku:</h4><p>${bookDetails[index].detail}</p>`;
-                    detailDiv.style.display = "block"; 
-                }
-            });
-        });
-    </script> 
 </body>
 </html>
