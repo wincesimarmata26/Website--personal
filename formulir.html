@@ -112,7 +112,8 @@
     </style>
 </head>
 <body>
-
+    <div id="navbar-placeholder"></div>
+    
     <div class="container my-5">
     <h1 id="formulir" class="text-center mb-4">Formulir</h1>
     
@@ -310,6 +311,14 @@
         </form> 
          </section>
 </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    $(function(){
+        $("#navbar-placeholder").load("navbar.html");
+    });
+</script>
       
     
 </body>
