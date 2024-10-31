@@ -46,7 +46,9 @@
         }
     </style>
 </head>
-<body>
+<body> 
+    <div id="navbar-placeholder"></div>
+    
     <div class="container">
         <h1>Fitur Utama HTML5 dan CSS</h1>
 
@@ -77,5 +79,15 @@
     <footer>
         &copy; 2024 Perpustakaan Wince Simarmata
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    $(function(){
+        $("#navbar-placeholder").load("navbar.html");
+    });
+</script>
+    
 </body>
 </html>
