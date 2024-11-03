@@ -61,6 +61,16 @@
             border-radius: 10px;
         }
 
+        .details-container {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .book-info {
+            margin-left: 20px;
+        }
+
         footer {
             margin-top: 20px;
             text-align: center;
@@ -97,15 +107,20 @@
             </div>
         </div>
 
-        <div id="book-details">
-            <h2>Detail Buku</h2>
-            <p id="detail-title"></p>
-            <p id="detail-author"></p>
-            <p id="detail-publisher"></p>
-            <p id="detail-isbn"></p>
-            <p id="detail-year"></p>
-            <p id="detail-pages"></p>
-            <button id="close-details" class="btn btn-danger">Tutup</button>
+        <div id="book-details" class="details-container">
+            <div class="book-img">
+                <img id="detail-image" src="" alt="Detail Buku" style="width: 150px; height: auto; border-radius: 10px;">
+            </div>
+            <div class="book-info">
+                <h2>Detail Buku</h2>
+                <p id="detail-title"></p>
+                <p id="detail-author"></p>
+                <p id="detail-publisher"></p>
+                <p id="detail-isbn"></p>
+                <p id="detail-year"></p>
+                <p id="detail-pages"></p>
+                <button id="close-details" class="btn btn-danger">Tutup</button>
+            </div>
         </div>
     </div>
 
@@ -136,7 +151,9 @@
                 const isbn = $(this).data('isbn');
                 const year = $(this).data('year');
                 const pages = $(this).data('pages');
+                const image = $(this).find('img').attr('src');
 
+                $('#detail-image').attr('src', image);
                 $('#detail-title').text('Judul: ' + title);
                 $('#detail-author').text('Pengarang: ' + author);
                 $('#detail-publisher').text('Penerbit: ' + publisher);
