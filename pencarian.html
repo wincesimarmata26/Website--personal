@@ -40,23 +40,23 @@
     <h1>Pencarian Buku</h1>
     <input type="text" id="search" placeholder="Cari buku...">
     <div id="book-list">
-        <div class="book" data-title="10 Langkah Mencerdaskan Kota" data-author="Pengarang A" data-publisher="Penerbit A" data-isbn="1234567890">
+        <div class="book" data-title="10 Langkah Mencerdaskan Kota" data-author="Sutriadi" data-publisher="ITB Press" data-isbn="978-602-5417-25-2" data-year="2018" data-pages="321">
             <img src="picture/download (5).jpeg" alt="10 Langkah Mencerdaskan Kota">
             <p>10 Langkah Mencerdaskan Kota</p>
         </div>
-        <div class="book" data-title="Melangkah" data-author="Pengarang B" data-publisher="Penerbit B" data-isbn="0987654321">
+        <div class="book" data-title="Melangkah" data-author="JS Khairen" data-publisher="Gramedia Widiasarana Indonesia" data-isbn="978-6020523316" data-year="2020" data-pages="368">
             <img src="picture/download (6).jpeg" alt="Melangkah">
             <p>Melangkah</p>
         </div>
-        <div class="book" data-title="Ilmu Jalanan" data-author="Pengarang C" data-publisher="Penerbit C" data-isbn="1122334455">
+        <div class="book" data-title="Ilmu Jalanan" data-author="Rico Tampenawas" data-publisher="Elex Media Komputindo" data-isbn="SCOOPG162268" data-year="2018" data-pages="212">
             <img src="picture/download (7).jpeg" alt="Ilmu Jalanan">
             <p>Ilmu Jalanan</p>
         </div>
-        <div class="book" data-title="Mengenal Diri Sendiri" data-author="Pengarang D" data-publisher="Penerbit D" data-isbn="2233445566">
+        <div class="book" data-title="Mengenal Diri Sendiri" data-author="Eka Silvana" data-publisher="Anak Hebat Indonesia" data-isbn="978-6234007480" data-year="2023" data-pages="182">
             <img src="picture/download (8).jpeg" alt="Mengenal Diri Sendiri">
             <p>Mengenal Diri Sendiri</p>
         </div>
-        <div class="book" data-title="Outliers (Rahasia di balik kesuksesan)" data-author="Pengarang E" data-publisher="Penerbit E" data-isbn="3344556677">
+        <div class="book" data-title="Outliers (Rahasia di balik kesuksesan)" data-author="Malcolm Gladwell" data-publisher="Gramedia Pustaka Utama" data-isbn="978-9792244762" data-year="2020" data-pages="354">
             <img src="picture/download.png" alt="Outliers (Rahasia di balik kesuksesan)">
             <p>Outliers (Rahasia di balik kesuksesan)</p>
         </div>
@@ -68,6 +68,8 @@
         <p id="detail-author"></p>
         <p id="detail-publisher"></p>
         <p id="detail-isbn"></p>
+        <p id="detail-year"></p>
+        <p id="detail-pages"></p>
         <button id="close-details">Tutup</button>
     </div>
 
@@ -91,11 +93,15 @@
                 const author = $(this).data('author');
                 const publisher = $(this).data('publisher');
                 const isbn = $(this).data('isbn');
+                const year = $(this).data('year');
+                const pages = $(this).data('pages');
 
                 $('#detail-title').text('Judul: ' + title);
                 $('#detail-author').text('Pengarang: ' + author);
                 $('#detail-publisher').text('Penerbit: ' + publisher);
                 $('#detail-isbn').text('ISBN: ' + isbn);
+                $('#detail-year').text('Tahun Terbit: ' + year);
+                $('#detail-pages').text('Jumlah Halaman: ' + pages);
 
                 $('#book-details').show();
             });
