@@ -20,11 +20,19 @@
             padding: 10px;
             text-align: center;
             width: 150px;
+            cursor: pointer;
         }
 
         .book img {
             width: 100%;
             height: auto;
+        }
+
+        #book-details {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -32,27 +40,38 @@
     <h1>Pencarian Buku</h1>
     <input type="text" id="search" placeholder="Cari buku...">
     <div id="book-list">
-        <div class="book" data-title="10 Langkah Mencerdaskan Kota">
+        <div class="book" data-title="10 Langkah Mencerdaskan Kota" data-author="Pengarang A" data-publisher="Penerbit A" data-isbn="1234567890">
             <img src="picture/download (5).jpeg" alt="10 Langkah Mencerdaskan Kota">
             <p>10 Langkah Mencerdaskan Kota</p>
         </div>
-        <div class="book" data-title="Melangkah">
+        <div class="book" data-title="Melangkah" data-author="Pengarang B" data-publisher="Penerbit B" data-isbn="0987654321">
             <img src="picture/download (6).jpeg" alt="Melangkah">
             <p>Melangkah</p>
         </div>
-        <div class="book" data-title="Ilmu Jalanan">
+        <div class="book" data-title="Ilmu Jalanan" data-author="Pengarang C" data-publisher="Penerbit C" data-isbn="1122334455">
             <img src="picture/download (7).jpeg" alt="Ilmu Jalanan">
             <p>Ilmu Jalanan</p>
         </div>
-        <div class="book" data-title="Mengenal Diri Sendiri">
+        <div class="book" data-title="Mengenal Diri Sendiri" data-author="Pengarang D" data-publisher="Penerbit D" data-isbn="2233445566">
             <img src="picture/download (8).jpeg" alt="Mengenal Diri Sendiri">
             <p>Mengenal Diri Sendiri</p>
         </div>
-        <div class="book" data-title="Outliers (Rahasia di balik kesuksesan)">
+        <div class="book" data-title="Outliers (Rahasia di balik kesuksesan)" data-author="Pengarang E" data-publisher="Penerbit E" data-isbn="3344556677">
             <img src="picture/download.png" alt="Outliers (Rahasia di balik kesuksesan)">
             <p>Outliers (Rahasia di balik kesuksesan)</p>
         </div>
     </div>
+
+    <div id="book-details">
+        <h2>Detail Buku</h2>
+        <p id="10 Langkah Mencerdaskan Kota"></p>
+        <p id="Sutriadi"></p>
+        <p id="ITB Press"></p>
+        <p id="2018"></p>
+        <p id="978-602-5417-25-2"></p>
+        <button id="close-details">Tutup</button>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -66,6 +85,24 @@
                         $(this).hide();
                     }
                 });
+            });
+
+            $('.book').on('click', function() {
+                const title = $(this).data('title');
+                const author = $(this).data('author');
+                const publisher = $(this).data('publisher');
+                const isbn = $(this).data('isbn');
+
+                $('#detail-title').text('Judul: ' + title);
+                $('#detail-author').text('Pengarang: ' + author);
+                $('#detail-publisher').text('Penerbit: ' + publisher);
+                $('#detail-isbn').text('ISBN: ' + isbn);
+
+                $('#book-details').show();
+            });
+
+            $('#close-details').on('click', function() {
+                $('#book-details').hide();
             });
         });
     </script>
