@@ -76,6 +76,26 @@
             text-align: center;
             font-weight: bold;
         }
+
+        .book-list {
+            display: flex;
+            flex-wrap: nowrap; /* Menjaga agar buku tetap pada satu baris */
+            overflow-x: auto; /* Scroll horizontal jika terlalu banyak buku */
+            padding: 10px 0; /* Ruang di atas dan bawah */
+        }
+
+        .book-list::-webkit-scrollbar {
+            height: 8px; /* Tinggi scrollbar */
+        }
+
+        .book-list::-webkit-scrollbar-thumb {
+            background: #ccc; /* Warna scrollbar */
+            border-radius: 10px;
+        }
+
+        .book-list::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Latar belakang scrollbar */
+        }
     </style>
 </head>
 <body>
@@ -84,7 +104,7 @@
     <div class="container text-center my-5">
         <h1 class="display-4 font-weight-bold text-primary">Pencarian Buku</h1>
         <input type="text" id="search" class="form-control mb-4" placeholder="Cari buku...">
-        <div id="book-list" class="d-flex flex-wrap justify-content-center">
+        <div id="book-list" class="book-list">
             <div class="book" data-title="10 Langkah Mencerdaskan Kota" data-author="Sutriadi" data-publisher="ITB Press" data-isbn="978-602-5417-25-2" data-year="2018" data-pages="321">
                 <img src="picture/download (5).jpeg" alt="10 Langkah Mencerdaskan Kota">
                 <p>10 Langkah Mencerdaskan Kota</p>
