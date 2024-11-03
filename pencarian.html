@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pencarian Buku</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-image: url("picture/efa2c05b-5f7e-430f-a22e-867136c5e31e.jpg");
+            background-size: cover;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
         }
 
-        #book-list {
-            display: flex;
-            flex-wrap: wrap;
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            color: #444;
+            text-align: center;
         }
 
         .book {
@@ -21,11 +37,19 @@
             text-align: center;
             width: 150px;
             cursor: pointer;
+            border-radius: 10px;
+            background-color: #fff;
+            transition: transform 0.2s;
+        }
+
+        .book:hover {
+            transform: scale(1.05);
         }
 
         .book img {
             width: 100%;
             height: auto;
+            border-radius: 10px;
         }
 
         #book-details {
@@ -33,47 +57,61 @@
             border: 1px solid #ccc;
             padding: 10px;
             margin-top: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div id="navbar-placeholder"></div>
-    
-    <h1>Pencarian Buku</h1>
-    <input type="text" id="search" placeholder="Cari buku...">
-    <div id="book-list">
-        <div class="book" data-title="10 Langkah Mencerdaskan Kota" data-author="Sutriadi" data-publisher="ITB Press" data-isbn="978-602-5417-25-2" data-year="2018" data-pages="321">
-            <img src="picture/download (5).jpeg" alt="10 Langkah Mencerdaskan Kota">
-            <p>10 Langkah Mencerdaskan Kota</p>
+
+    <div class="container text-center my-5">
+        <h1 class="display-4 font-weight-bold text-primary">Pencarian Buku</h1>
+        <input type="text" id="search" class="form-control mb-4" placeholder="Cari buku...">
+        <div id="book-list" class="d-flex flex-wrap justify-content-center">
+            <div class="book" data-title="10 Langkah Mencerdaskan Kota" data-author="Sutriadi" data-publisher="ITB Press" data-isbn="978-602-5417-25-2" data-year="2018" data-pages="321">
+                <img src="picture/download (5).jpeg" alt="10 Langkah Mencerdaskan Kota">
+                <p>10 Langkah Mencerdaskan Kota</p>
+            </div>
+            <div class="book" data-title="Melangkah" data-author="JS Khairen" data-publisher="Gramedia Widiasarana Indonesia" data-isbn="978-6020523316" data-year="2020" data-pages="368">
+                <img src="picture/download (6).jpeg" alt="Melangkah">
+                <p>Melangkah</p>
+            </div>
+            <div class="book" data-title="Ilmu Jalanan" data-author="Rico Tampenawas" data-publisher="Elex Media Komputindo" data-isbn="SCOOPG162268" data-year="2018" data-pages="212">
+                <img src="picture/download (7).jpeg" alt="Ilmu Jalanan">
+                <p>Ilmu Jalanan</p>
+            </div>
+            <div class="book" data-title="Mengenal Diri Sendiri" data-author="Eka Silvana" data-publisher="Anak Hebat Indonesia" data-isbn="978-6234007480" data-year="2023" data-pages="182">
+                <img src="picture/download (8).jpeg" alt="Mengenal Diri Sendiri">
+                <p>Mengenal Diri Sendiri</p>
+            </div>
+            <div class="book" data-title="Outliers (Rahasia di balik kesuksesan)" data-author="Malcolm Gladwell" data-publisher="Gramedia Pustaka Utama" data-isbn="978-9792244762" data-year="2020" data-pages="354">
+                <img src="picture/download.png" alt="Outliers (Rahasia di balik kesuksesan)">
+                <p>Outliers (Rahasia di balik kesuksesan)</p>
+            </div>
         </div>
-        <div class="book" data-title="Melangkah" data-author="JS Khairen" data-publisher="Gramedia Widiasarana Indonesia" data-isbn="978-6020523316" data-year="2020" data-pages="368">
-            <img src="picture/download (6).jpeg" alt="Melangkah">
-            <p>Melangkah</p>
-        </div>
-        <div class="book" data-title="Ilmu Jalanan" data-author="Rico Tampenawas" data-publisher="Elex Media Komputindo" data-isbn="SCOOPG162268" data-year="2018" data-pages="212">
-            <img src="picture/download (7).jpeg" alt="Ilmu Jalanan">
-            <p>Ilmu Jalanan</p>
-        </div>
-        <div class="book" data-title="Mengenal Diri Sendiri" data-author="Eka Silvana" data-publisher="Anak Hebat Indonesia" data-isbn="978-6234007480" data-year="2023" data-pages="182">
-            <img src="picture/download (8).jpeg" alt="Mengenal Diri Sendiri">
-            <p>Mengenal Diri Sendiri</p>
-        </div>
-        <div class="book" data-title="Outliers (Rahasia di balik kesuksesan)" data-author="Malcolm Gladwell" data-publisher="Gramedia Pustaka Utama" data-isbn="978-9792244762" data-year="2020" data-pages="354">
-            <img src="picture/download.png" alt="Outliers (Rahasia di balik kesuksesan)">
-            <p>Outliers (Rahasia di balik kesuksesan)</p>
+
+        <div id="book-details">
+            <h2>Detail Buku</h2>
+            <p id="detail-title"></p>
+            <p id="detail-author"></p>
+            <p id="detail-publisher"></p>
+            <p id="detail-isbn"></p>
+            <p id="detail-year"></p>
+            <p id="detail-pages"></p>
+            <button id="close-details" class="btn btn-danger">Tutup</button>
         </div>
     </div>
 
-    <div id="book-details">
-        <h2>Detail Buku</h2>
-        <p id="detail-title"></p>
-        <p id="detail-author"></p>
-        <p id="detail-publisher"></p>
-        <p id="detail-isbn"></p>
-        <p id="detail-year"></p>
-        <p id="detail-pages"></p>
-        <button id="close-details">Tutup</button>
-    </div>
+    <footer>
+        <p>&copy; 2024 Perpustakaan Wince Simarmata. All Rights Reserved.</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
