@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian Buku</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #book-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .book {
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            width: 150px;
+        }
+
+        .book img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pencarian Buku</h1>
+    <input type="text" id="search" placeholder="Cari buku...">
+    <div id="book-list">
+        <div class="book" data-title="Buku 1">
+            <img src="book1.jpg" alt="Buku 1">
+            <p>Buku 1</p>
+        </div>
+        <div class="book" data-title="Buku 2">
+            <img src="book2.jpg" alt="Buku 2">
+            <p>Buku 2</p>
+        </div>
+        <div class="book" data-title="Buku 3">
+            <img src="book3.jpg" alt="Buku 3">
+            <p>Buku 3</p>
+        </div>
+        <div class="book" data-title="Buku 4">
+            <img src="book4.jpg" alt="Buku 4">
+            <p>Buku 4</p>
+        </div>
+        <div class="book" data-title="Buku 5">
+            <img src="book5.jpg" alt="Buku 5">
+            <p>Buku 5</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#search').on('input', function() {
+                const query = $(this).val().toLowerCase();
+                $('.book').each(function() {
+                    const title = $(this).data('title').toLowerCase();
+                    if (title.includes(query)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
