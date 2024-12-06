@@ -24,7 +24,7 @@ href<div class="container-fluid" style="background-image: url('picture/realistic
                         <li><a href="html-css.html">HTML&CSS</a></li>
                         <li><a href="modul-5.html">Javascript</a></li>
                         <li><a href="./php/daftar_hari.php">Modul 7</a></li>
-                        <li><a href="./php/Modul8.php">Modul </a></li>
+                        <li><a href="./php/Modul8.php">Modul 8</a></li>
                 </li>
             </ul>
         </div>
